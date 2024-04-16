@@ -92,7 +92,7 @@ const ValiderInvita = async () => {
             document.getElementById('linkmessaa').innerHTML = `
                 <legend>
                     <span class="number">3</span>
-                    Vous y êtes déjà !
+                    Ce ${invphone} Numéro a déjà été utilisé !
                  </legend>
             `;
         } else {
