@@ -6,3 +6,13 @@ status = 200
 [[redirects]]
 from = "enter*"
 to = "/accepter:splat"
+
+[[redirects]]
+from = "dashboard"
+to = "/dashboard.html"
+status = 200
+
+[[redirects]]
+from = "connexion"
+to = "/login.html"
+status = 200

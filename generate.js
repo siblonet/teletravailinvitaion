@@ -4,9 +4,13 @@ const Generate = async () => {
     const invm = document.getElementById('invm').value;
     const invc = document.getElementById('invc').value;
     const inva = document.getElementById('inva').value;
+    const loading = document.getElementById('loading');
 
     if (invn && invt && invm && invc && inva) {
         if (invm === invc) {
+            loading.removeAttribute("onclick");
+            loading.innerText = "En cours ...";
+            
             const data = {
                 name: invn,
                 phone: invt,
@@ -40,6 +44,8 @@ const Generate = async () => {
                         Échec, vérifiez votre connexion ou essayez plus tard.
                     </legend>
                 `;
+                loading.setAttribute("onclick", "Generate()");
+                loading.innerText = "Générer";
             } else {
                 document.getElementById('linkmessa').innerHTML = `
                     <legend>
@@ -48,11 +54,12 @@ const Generate = async () => {
                     </legend>
                     <textarea name="field3" placeholder="lien">https://invitation-teletravail.netlify.app/enter?${responseData.id}</textarea>
                 `;
+                loading.innerText = "Copiez le lien ci-dessous";
             }
-        }else{
+        } else {
             const messages = document.getElementById('messages');
-        messages.classList.add("form-style-5");
-        messages.innerHTML = `
+            messages.classList.add("form-style-5");
+            messages.innerHTML = `
                 <form>
                     <fieldset id="linkmessa">
                         <legend style="color: #bc1a42;">
@@ -82,9 +89,9 @@ const Generate = async () => {
                 </form>
             `;
 
-            setTimeout(() => {
-                messages.innerHTML = "";
-                messages.classList.remove("form-style-5");
-            }, 3000);
+        setTimeout(() => {
+            messages.innerHTML = "";
+            messages.classList.remove("form-style-5");
+        }, 3000);
     }
 };

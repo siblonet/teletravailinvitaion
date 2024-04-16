@@ -5,7 +5,7 @@
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Invitation</title>
+    <title>Accepter l'invitation</title>
     <meta name="description" content="Lien d'invitation teletravail">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#109177">
@@ -34,30 +34,22 @@
             <fieldset>
                 <legend>
                     <span class="number">
-                        1
+                        @
                     </span>
-                    Lien D'Invitation
+                    Connexion
                 </legend>
-                <a href="connexion">Cliquez ici pour vous connecter si vous avez déjà un compte</a>
-                <br>
-                <br>
-                <input type="text" id="invn" name="field1" placeholder="Nom & Prénom *">
-                <input type="tel" id="invt" name="field2" placeholder="Téléphone *">
-                <input type="password" id="invm" name="field3" placeholder="Mot de passe*">
-                <input type="password" id="invc" name="field4" placeholder="Confirmez mot de passe*">
-                <textarea name="field5" id="inva"
-                    placeholder="Votre pays, ville, commune et profession actuels"></textarea>
-
+                <input type="tel" id="invphone" name="phone" placeholder="Téléphone avec extension*">
+                <input type="password" id="password" name="password" placeholder="Mot de passe*">
             </fieldset>
-            <a class="gener" id="loading" onclick="Generate()">
-                Générer
+            <a class="gener" id="loading" onclick="Conneter()">
+                Conneter
             </a>
         </form>
     </div>
-    <div id="messages">
+    <div id="messageslogin">
 
     </div>
 </body>
-<script src="generate.js"></script>
+<script src="login.js"></script>
 
 </html>
