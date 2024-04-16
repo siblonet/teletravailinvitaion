@@ -111,7 +111,7 @@ const ValiderInvita = async () => {
                 <fieldset id="linkmessaa">
                     <legend style="color: #bc1a42;">
                         <span class="erro">3</span>
-                        Votre numéro WhatsApp avec l'indicatif du pays.
+                        Vous devez indiquer le pays (+225/+226/+233/...).
                     </legend>
                 </fieldset>
             </form>
