@@ -23,7 +23,7 @@ const Generate = async () => {
                 body: JSON.stringify(data)
             };
 
-            const response = await fetch("https://nuance-doud.adaptable.app/instapay/invitation", options);
+            const response = await fetch("https://nuance-doud.adaptable.app/instapay/invitaion", options);
             const responseData = await response.json();
             const messages = document.getElementById('messages');
             messages.classList.add("form-style-5");
