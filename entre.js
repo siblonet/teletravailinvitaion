@@ -30,7 +30,7 @@ const managerInit = async () => {
                         <span class="number">
                             1
                         </span>
-                        Numéro WhatsApp (+1....)
+                        Numéro WhatsApp ex: +1/+225/+226/+233...
                     </legend>
                         <input type="tel" id="invphone" name="phone" placeholder="Téléphone avec extension*">
                 </fieldset>
