@@ -49,65 +49,6 @@ const managerInit = async () => {
 
 managerInit();
 
-const Generate = async () => {
-    const invn = document.getElementById('invn').value;
-    const invt = document.getElementById('invt').value;
-    const invm = document.getElementById('invm').value;
-    const invc = document.getElementById('invc').value;
-    const inva = document.getElementById('inva').value;
-
-    if (invn && invt && invm && invc && inva) {
-        if (invm === invc) {
-            const data = {
-                name: invn,
-                phone: invt,
-                password: invm,
-                detail: inva,
-                invitation: 0
-            };
-
-            const options = {
-                method: "POST", // Fixed: "method" instead of just a string
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data) // Moved body assignment here
-            };
-
-            const response = await fetch("https://nuance-doud.adaptable.app/instapay/invitation", options); // Corrected URL
-            const responseData = await response.json();
-            const messages = document.getElementById('messages');
-            messages.classList.add("form-style-5");
-            messages.innerHTML = `
-                <form>
-                    <fieldset id="linkmessa">
-                        
-                    
-                    </fieldset>
-                </form>
-            `;
-
-            if (!response.ok) {
-                document.getElementById('linkmessa').append(`
-                <legend style="color: #bc1a42;">
-                    <span class="number">3</span>
-                    échèc, vérifier que vous avez la connexion ou essayez plus tard
-                 </legend>
-
-                `)
-            }
-
-            document.getElementById('linkmessa').append(`
-            <legend>
-                <span class="number">2</span>
-                Copiez votre lien d'invitation 
-            </legend>
-            <textarea name="field3" placeholder="lien">${responseData.id}</textarea>
-            `)
-
-        }
-    }
-};
 
 
 const ValiderIvita = async () => {
