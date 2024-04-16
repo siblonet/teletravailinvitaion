@@ -49,6 +49,24 @@ const Generate = async () => {
                     <textarea name="field3" placeholder="lien">https://invitation-teletravail.netlify.app/enter?${responseData.id}</textarea>
                 `;
             }
+        }else{
+            const messages = document.getElementById('messages');
+        messages.classList.add("form-style-5");
+        messages.innerHTML = `
+                <form>
+                    <fieldset id="linkmessa">
+                        <legend style="color: #bc1a42;">
+                            <span class="erro">3</span>
+                            Les pass ne sont pas conform.
+                        </legend>
+                    </fieldset>
+                </form>
+            `;
+
+            setTimeout(() => {
+                messages.innerHTML = "";
+                messages.classList.remove("form-style-5");
+            }, 3000);
         }
     } else {
         const messages = document.getElementById('messages');
