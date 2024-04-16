@@ -46,7 +46,7 @@ const Generate = async () => {
                         <span class="number">2</span>
                         Copiez votre lien d'invitation 
                     </legend>
-                    <textarea name="field3" placeholder="lien">${responseData.id}</textarea>
+                    <textarea name="field3" placeholder="lien">https://invitation-teletravail.netlify.app/enter?${responseData.id}</textarea>
                 `;
             }
         }
