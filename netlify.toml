@@ -1,8 +1,8 @@
 [[redirects]]
-from = "/index.html*"
-to = "/:splat"
-
-[[redirects]]
 from = "accepter"
 to = "/entre.html"
 status = 200
+
+[[redirects]]
+from = "enter*"
+to = "/accepter:splat"

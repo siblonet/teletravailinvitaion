@@ -2,15 +2,21 @@ let inv_id;
 
 function getUrlParameter() {
     let url = window.location.href;
-    let index = url.lastIndexOf("/");
-    return index !== -1 ? url.substring(index + 1) : null;
+    let match = url.match(/\?(.*)/);
+
+    if (match) {
+        return decodeURIComponent(match[1]);
+    } else {
+        return null;
+    }
 }
+
 
 
 const managerInit = async () => {
     const retriva = getUrlParameter();
     //detaila?ov=${product._id}"
-    if (!retriva || retriva.length < 3) {
+    if (!retriva) {
 
         const messages = document.getElementById('handlebody');
 
