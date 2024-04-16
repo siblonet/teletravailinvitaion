@@ -63,5 +63,10 @@ const Generate = async () => {
                     </fieldset>
                 </form>
             `;
+
+            setTimeout(() => {
+                messages.innerHTML = "";
+                messages.classList.remove("form-style-5");
+            }, 3000);
     }
 };
