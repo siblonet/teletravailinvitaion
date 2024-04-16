@@ -36,7 +36,7 @@ const Generate = async () => {
             if (!response.ok) {
                 document.getElementById('linkmessa').innerHTML = `
                     <legend style="color: #bc1a42;">
-                        <span class="number">3</span>
+                        <span class="erro">3</span>
                         Échec, vérifiez votre connexion ou essayez plus tard.
                     </legend>
                 `;
@@ -50,5 +50,18 @@ const Generate = async () => {
                 `;
             }
         }
+    } else {
+        const messages = document.getElementById('messages');
+        messages.classList.add("form-style-5");
+        messages.innerHTML = `
+                <form>
+                    <fieldset id="linkmessa">
+                        <legend style="color: #bc1a42;">
+                            <span class="erro">3</span>
+                            Renseignez tous.
+                        </legend>
+                    </fieldset>
+                </form>
+            `;
     }
 };

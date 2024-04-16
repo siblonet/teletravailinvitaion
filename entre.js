@@ -32,9 +32,9 @@ const managerInit = async () => {
                         </span>
                         Numéro WhatsApp (+1....)
                     </legend>
-                        <input type="tel" id="invphone" name="inviter_invitation_idlin" placeholder="Téléphone avec extension*">
+                        <input type="tel" id="invphone" name="phone" placeholder="Téléphone avec extension*">
                 </fieldset>
-                <input style="cursor: pointer !important;" type="submit" value="Valider" onclick="ValiderIvita()" />
+                <input style="cursor: pointer !important;" value="Valider" onclick="ValiderIvita()" />
             </form>
         </div>
 
@@ -110,7 +110,7 @@ const ValiderIvita = async () => {
         }
 
 
-    }else{
+    } else {
         const messagesr = document.getElementById('messagesa');
         messagesr.classList.add("form-style-5");
         messagesr.innerHTML = `

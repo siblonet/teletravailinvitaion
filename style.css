@@ -91,8 +91,8 @@
 }
 
 
-.form-style-5 input[type="submit"],
-.form-style-5 input[type="button"] {
+
+.form-style-5 .gener{
     position: relative;
     display: block;
     padding: 19px 39px 18px 39px;
@@ -102,12 +102,11 @@
     font-size: 18px;
     text-align: center;
     font-style: normal;
-    width: 100%;
-    border: none;
+    width: 80%;
     margin-bottom: 10px;
+    cursor: pointer !important;
 }
 
-.form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover {
+.form-style-5 .gener:hover {
     background: #4cdbf4;
 }
