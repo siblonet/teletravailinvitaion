@@ -17,35 +17,7 @@ const managerInit = async () => {
     const retriva = getUrlParameter();
     //detaila?ov=${product._id}"
     if (!retriva) {
-
-        const messages = document.getElementById('handlebody');
-
-        messages.innerHTML = `
-            <br>
-            <br>
-            <div class="form-style-5">
-                <form>
-                    <fieldset>
-                        <legend>
-                            <span class="number">
-                                1
-                            </span>
-                            Lien D'Invitation
-                        </legend>
-                        <input type="text" id="invn" name="field1" placeholder="Nom & Prénom *">
-                        <input type="tel" id="invt" name="field2" placeholder="Téléphone *">
-                        <input type="password" id="invm" name="field2" placeholder="Mot de pass*">
-                        <input type="password" id="invc" name="field4" placeholder="Confirm mot pass*">
-                        <textarea name="field3" id="inva"
-                            placeholder="Votre paye, ville, commune et proffession actuel"></textarea>
-                    </fieldset>
-                    <input style="cursor: pointer !important;" type="submit" value="Générer" onclick="Generate()" />
-                </form>
-            </div>
-            <div id="messages">
-                
-            </div>
-        `
+        window.location.href = "/"
     } else {
         inv_id = retriva;
         const invited_data = `
