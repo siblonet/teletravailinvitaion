@@ -61,7 +61,7 @@ const ValiderInvita = async () => {
         loading.innerText = "En cours ...";
 
         const data = {
-            _id: inv_id,
+            invita: inv_id,
             phone: invphone
         };
 
